@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import PrivateRoute from './Utils/PrivateRoute';
 import About from './views/About/About';
 import BlocklyPage from './views/BlocklyPage/BlocklyPage';
+import HelpPage from "./views/BlocklyPage/HelpPage";
 import BugReport from './views/BugReport/BugReport';
 import ContentCreator from './views/ContentCreator/ContentCreator';
 import Home from './views/Home/Home';
@@ -112,6 +113,17 @@ const App = () => {
             </PrivateRoute>
           }
         />
+
+        {/* Add a nested route for the HelpPage under BlocklyPage */}
+        <Route
+          path='/help'
+          element={
+            <PrivateRoute>
+              <HelpPage />
+            </PrivateRoute>
+          }
+        />
+
         <Route path='/bugreport' element={<BugReport />} />
         <Route path='*' element={<NotFound/>} />
       </Routes>

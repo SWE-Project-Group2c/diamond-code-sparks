@@ -1,4 +1,5 @@
-import { message } from "antd"
+import { message, Button } from "antd"
+import { QuestionCircleOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import BlocklyCanvasPanel from "../../components/ActivityPanels/BlocklyCanvasPanel/BlocklyCanvasPanel"
@@ -76,6 +77,13 @@ export default function BlocklyPage({ isSandbox }) {
     <div className="container nav-padding">
       <NavBar />
       <div className="flex flex-row">
+      <Button
+          type="primary"
+          shape="circle"
+          icon={<QuestionCircleOutlined />}
+          size="large"
+          onClick={() => navigate("/help")}  
+          ></Button>
         <BlocklyCanvasPanel activity={activity} setActivity={setActivity} isSandbox={isSandbox} />
       </div>
     </div>
