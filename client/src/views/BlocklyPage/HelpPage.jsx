@@ -122,10 +122,6 @@ const getLanguageContent = (language) => {
         <ul>
           <li>Develop a game where the computer randomly selects a number, and the player has to guess it. Provide hints if the guessed number is too high or too low.</li>
         </ul>
-        <h5>To-Do List Application</h5>
-        <ul>
-          <li>Build a console-based to-do list application that allows users to add tasks, mark them as completed, and view the list.</li>
-        </ul>
         <h5>Dice Rolling Simulator</h5>
         <ul>
           <li>Create a program that simulates rolling a dice. Prompt the user to roll the dice and display the result.</li>
@@ -215,18 +211,126 @@ const getLanguageContent = (language) => {
     </div>
     },
     Lua: {
-      commonUses: `
-        Lua Common Uses goes here...
-      `,
-      sampleProjects: 'Lua Sample Projects goes here...',
-      faq: 'Lua FAQ goes here...',
+      commonUses: 
+      <div class="help-section">
+        <h5>Lua is a lightweight, high-level scripting language designed for embedded systems and general-purpose programming. Lua is commonly used for:</h5>
+        <ul>
+          <li>
+          Embedded Systems: Lua is often embedded in applications and game engines to provide a flexible scripting language for customization.
+          </li>
+        </ul> 
+        <ul>
+          <li>Game Development: Lua is popular in the gaming industry for scripting game logic and behavior due to its simplicity and efficiency.</li>
+        </ul>
+        <ul>
+          <li>Scripting in Software: Lua is used as a scripting language in various software applications to allow users to extend functionality.</li>
+        </ul>
+        <ul>
+          <li>Configuration Files: Lua is employed for writing configuration files due to its easy syntax and readability.</li>
+        </ul>
+        <ul>
+          <li>Network Programming: Lua is used for network programming, creating lightweight servers and clients.</li>
+        </ul>
+        <ul>
+          <li>Automation and Scripting: Lua scripts can be used for automating tasks and scripting in various environments.</li>
+        </ul>
+        <h5>Note: Not all of this cannot be done within CodeSparks, however as you learn and grow in your programming journey, you could one day do all of these things in your very own IDE! </h5>
+      </div>, 
+    sampleProjects: 
+    <div class="help-section">
+       <h5>Text Adventure Game</h5>
+        <ul>
+          <li>
+          Create a simple text-based adventure game using Lua, incorporating user input and decision-making.
+          </li>
+        </ul> 
+        <h5>Guess the Word Game</h5>
+        <ul>
+          <li>Build a Lua-based word guessing game where the computer selects a word, and the player has to guess it.</li>
+        </ul>
+        <h5>Temperature Converter</h5>
+        <ul>
+          <li>Develop a Lua script that converts temperatures between Celsius and Fahrenheit based on user input.</li>
+        </ul>
+        <h5>Simple Timer</h5>
+        <ul>
+          <li>Build a simple timer program in Lua that takes user input for the duration and counts down.</li>
+        </ul>
+      </div>,
+      faq: 
+      <div class="help-section">
+        <h5>Q: Can Lua be integrated with other programming languages?</h5>
+        <ul>
+          <li>A: Yes, Lua can be embedded in applications written in other languages, such as C and C++. This makes Lua a versatile choice for scripting in environments with existing codebases.</li>
+        </ul> 
+        <h5>Q: Is Lua suitable for large-scale software development?</h5>
+        <ul>
+          <li>A: Lua is often used for embedded systems and scripting rather than large-scale standalone applications. It excels in scenarios where a lightweight and efficient scripting language is required.</li>
+        </ul> 
+    </div>
     },
     Dart: {
-      commonUses: `
-        Dart Common Uses goes here...
-      `,
-      sampleProjects: 'Dart Sample Projects goes here...',
-      faq: 'Dart FAQ goes here...',
+      commonUses: 
+      <div class="help-section">
+        <h5>Dart is a client-optimized programming language for building web, mobile, and desktop applications. Dart is commonly used for:</h5>
+        <ul>
+          <li>
+          Mobile App Development with Flutter: Build native mobile applications for iOS and Android using Flutter, a UI toolkit powered by Dart.
+          </li>
+        </ul> 
+        <ul>
+          <li>Web Development: Create interactive and dynamic web applications using Dart for both frontend and backend development.</li>
+        </ul>
+        <ul>
+          <li>Desktop App Development: Develop cross-platform desktop applications using Flutter for Windows, macOS, and Linux.</li>
+        </ul>
+        <ul>
+          <li>Server-Side Development: Use Dart for server-side scripting and building web servers.</li>
+        </ul>
+        <ul>
+          <li>Game Development: Build simple games using the Flame game engine or other Dart-based game development libraries.</li>
+        </ul>
+        <ul>
+          <li>Command Line Tools: Create command-line tools and scripts using Dart for automation and scripting tasks.</li>
+        </ul>
+        <h5>Note: Not all of this cannot be done within CodeSparks, however as you learn and grow in your programming journey, you could one day do all of these things in your very own IDE! </h5>
+      </div>, 
+    sampleProjects: 
+    <div class="help-section">
+       <h5>Task Tracker App with Flutter</h5>
+        <ul>
+          <li>
+          Build a task tracker application using Flutter, allowing users to add, edit, and delete tasks.
+          </li>
+        </ul> 
+        <h5>Interactive Story App</h5>
+        <ul>
+          <li>Create an interactive story app using Flutter where users can make choices that affect the storyline.</li>
+        </ul>
+        <h5>Expense Tracker</h5>
+        <ul>
+          <li>Build a simple expense tracker app using Flutter, allowing users to log and categorize their expenses.</li>
+        </ul>
+        <h5>Simple Timer</h5>
+        <ul>
+          <li>Build a simple timer program in Lua that takes user input for the duration and counts down.</li>
+        </ul>
+      </div>,
+      faq: 
+      <div class="help-section">
+         <h5>Q: What is Flutter, and how does it relate to Dart?</h5>
+        <ul>
+          <li>A: Flutter is a UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase. Dart is the programming language used to write code for Flutter.</li>
+        </ul>
+        <h5>Q: Is Dart only for mobile app development?</h5>
+        <ul>
+          <li>A: No, Dart is a versatile language. While it gained popularity with Flutter for mobile app development, it is also used for web, desktop, and server-side development.</li>
+        </ul> 
+        <h5>Q: Can Dart be used for backend development?</h5>
+        <ul>
+          <li>A: Yes, Dart can be used for backend development with frameworks like Aqueduct and shelf, allowing developers to build server-side applications.</li>
+        </ul> 
+    </div>
     },
   };
 
