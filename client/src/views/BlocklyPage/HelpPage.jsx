@@ -50,18 +50,21 @@ const getLanguageContent = (language) => {
         </ul> 
         <h5>Weather App</h5>
         <ul>
-          <li>Build a weather application that fetches real-time weather data using a public API.</li>
+          <li>Build a simple weather app that allows users to input a city name and displays basic weather information, such as temperature and weather conditions.</li>
         </ul>
-        <h5>Expense Tracker</h5>
+        <h5>Color Picker</h5>
         <ul>
-          <li>Develop a simple expense tracker that helps users manage their financial transactions.</li>
+          <li>Build a color picker tool that allows users to select a color from a predefined list. Change the background color of the page accordingly.</li>
         </ul>
-        <h5>Quiz Game</h5>
+        <h5>Interactive Quiz</h5>
         <ul>
-          <li>Design a quiz game with a timer and score tracker, testing users on various topics.</li>
+          <li>Build an interactive quiz with multiple-choice questions. Display questions one at a time, and provide feedback on the user's answers.</li>
         </ul>
-      </div>
-  ,
+        <h5>Clock</h5>
+        <ul>
+          <li>Develop a digital clock that displays the current time. Update the time dynamically on the webpage.</li>
+        </ul>
+      </div>,
       faq: 
       <div class="help-section">
         <h5>Q: What is JavaScript used for?</h5>
@@ -72,18 +75,81 @@ const getLanguageContent = (language) => {
         <ul>
           <li>A: Despite the similar names, JavaScript and Java are distinct, different languages. JavaScript is primarily used for client-side web development, while Java is a general-purpose programming language often used for server-side development.</li>
         </ul> 
-        <h5>Q: What are some popular JavaScript frameworks?</h5>.
+        <h5>Q: What are some popular JavaScript frameworks?</h5>
         <ul>
           <li>A: Popular JavaScript frameworks include React, Angular, Vue.js for front-end development, and Node.js for server-side development.</li>
         </ul> 
     </div>,
     },
     Python: {
-      commonUses: `
-        Python Common Uses goes here...
-      `,
-      sampleProjects: 'Python Sample Projects goes here...',
-      faq: 'Python FAQ goes here...',
+      commonUses: 
+      <div class="help-section">
+        <h5>Python is a high-level, interpreted programming language known for its simplicity and readability. It supports multiple programming paradigms and has a vast standard library, making it suitable for various applications. Python is a versatile language used in various domains, including:</h5>
+        <ul>
+          <li>
+          Web Development: Build dynamic web applications using frameworks like Flask or Django.
+          </li>
+        </ul> 
+        <ul>
+          <li>Data Science and Analytics: Analyze and visualize data using libraries like NumPy, Pandas, and Matplotlib.</li>
+        </ul>
+        <ul>
+          <li>Machine Learning and AI: Develop machine learning models and implement artificial intelligence algorithms with tools like TensorFlow and PyTorch.</li>
+        </ul>
+        <ul>
+          <li>Automation and Scripting: Automate repetitive tasks and write scripts for system administration using Python.</li>
+        </ul>
+        <ul>
+          <li>Game Development: Create simple games using libraries such as Pygame.</li>
+        </ul>
+        <ul>
+          <li>Network Programming: Build network applications and tools using Python's socket and networking libraries.</li>
+        </ul>
+        <ul>
+          <li>Robotics and Hardware Programming: Control and program hardware devices using Python for IoT and robotics projects.</li>
+        </ul>
+        <h5>Note: Not all of this cannot be done within CodeSparks, however as you learn and grow in your programming journey, you could one day do all of these things in your very own IDE! </h5>
+      </div>, 
+    sampleProjects: 
+    <div class="help-section">
+       <h5>Calculator</h5>
+        <ul>
+          <li>
+          Create a simple command-line calculator that can perform basic arithmetic operations (addition, subtraction, multiplication, division).
+          </li>
+        </ul> 
+        <h5>Guess the Number Game</h5>
+        <ul>
+          <li>Develop a game where the computer randomly selects a number, and the player has to guess it. Provide hints if the guessed number is too high or too low.</li>
+        </ul>
+        <h5>To-Do List Application</h5>
+        <ul>
+          <li>Build a console-based to-do list application that allows users to add tasks, mark them as completed, and view the list.</li>
+        </ul>
+        <h5>Dice Rolling Simulator</h5>
+        <ul>
+          <li>Create a program that simulates rolling a dice. Prompt the user to roll the dice and display the result.</li>
+        </ul>
+        <h5>Currency Converter</h5>
+        <ul>
+          <li>Write a program that converts currency based on the user's input and current exchange rates.</li>
+        </ul>
+      </div>,
+      faq: 
+      <div class="help-section">
+        <h5>Q: What is Python used for?</h5>
+        <ul>
+          <li>A: Python is used for web development, data science, machine learning, automation, scripting, game development, and more due to its versatility and readability.</li>
+        </ul> 
+        <h5>Q: How does Python differ from other programming languages?</h5>
+        <ul>
+          <li>A: Despite the similar names, JavaScript and Java are distinct, different languages. JavaScript is primarily used for client-side web development, while Java is a general-purpose programming language often used for server-side development.</li>
+        </ul> 
+        <h5>Q: What are some popular Python frameworks?</h5>
+        <ul>
+          <li>A: Popular Python frameworks include Flask and Django for web development, NumPy and Pandas for data science, TensorFlow and PyTorch for machine learning, and more.</li>
+        </ul> 
+    </div>
     },
     PHP: {
       commonUses: `
