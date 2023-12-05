@@ -58,15 +58,25 @@
     max-width: 1250px;
   }
 
+  
+.help-content h5 {
+  font-size: small;
+}
+
+.help-content ul {
+    margin-left: 25px;
+}
+
 .help-section {
     margin-top: 20px;
-    padding: 8px;
+    padding:2px;
   }
   
-  .help-section h4 {
+.help-section h4 {
     color: #333;
     font-size: 16px;
     margin-bottom: 10px;
+    font-weight: bold;
   }
   
   
