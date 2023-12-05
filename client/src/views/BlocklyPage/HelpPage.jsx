@@ -152,11 +152,67 @@ const getLanguageContent = (language) => {
     </div>
     },
     PHP: {
-      commonUses: `
-        PHP Common Uses goes here...
-      `,
-      sampleProjects: 'PHP Sample Projects goes here...',
-      faq: 'PHP FAQ goes here...',
+      commonUses: 
+      <div class="help-section">
+        <h5>PHP is a server-side scripting language designed for web development, but it is also used as a general-purpose programming language. PHP is commonly used for:</h5>
+        <ul>
+          <li>
+          Web Development: Build dynamic and interactive websites by embedding PHP code within HTML.
+          </li>
+        </ul> 
+        <ul>
+          <li>Server-Side Scripting: Execute server-side scripts to generate dynamic web content and handle form submissions.</li>
+        </ul>
+        <ul>
+          <li>Content Management Systems (CMS): Develop and customize CMS platforms like WordPress, Joomla, and Drupal.</li>
+        </ul>
+        <ul>
+          <li>E-commerce Solutions: Create online shopping platforms and integrate payment gateways using PHP.</li>
+        </ul>
+        <ul>
+          <li>RESTful API Development: Develop server-side APIs for communication between web applications and services.</li>
+        </ul>
+        <ul>
+          <li>Command Line Scripting: Write scripts for automation and server-side tasks using PHP on the command line.</li>
+        </ul>
+        <h5>Note: Not all of this cannot be done within CodeSparks, however as you learn and grow in your programming journey, you could one day do all of these things in your very own IDE! </h5>
+      </div>, 
+    sampleProjects: 
+    <div class="help-section">
+       <h5>Basic Blog System</h5>
+        <ul>
+          <li>
+          Create a simple blog system with features like post creation, editing, and commenting.
+          </li>
+        </ul> 
+        <h5>User Registration and Authentication System</h5>
+        <ul>
+          <li>Build a user registration system with login/logout functionality and password hashing for security.</li>
+        </ul>
+        <h5>To-Do List Application</h5>
+        <ul>
+          <li>Develop a to-do list application with CRUD (Create, Read, Update, Delete) operations</li>
+        </ul>
+        <h5>Contact Form with Email Integration</h5>
+        <ul>
+          <li>Implement a contact form that sends emails to site administrators when users submit inquiries.</li>
+        </ul>
+      </div>,
+      faq: 
+      <div class="help-section">
+        <h5>Q: What is PHP used for?</h5>
+        <ul>
+          <li>A: PHP is a server-side scripting language used for web development, including creating dynamic web pages, handling forms, and interacting with databases.</li>
+        </ul> 
+        <h5>Q: Is PHP suitable for large-scale applications?</h5>
+        <ul>
+          <li>A: Yes, PHP is suitable for large-scale applications. Many popular websites and content management systems, including Facebook and WordPress, are powered by PHP.</li>
+        </ul> 
+        <h5>Q: What are some popular PHP frameworks?</h5>
+        <ul>
+          <li>A: Popular PHP frameworks include Laravel, Symfony, and CodeIgniter, providing tools and structures to streamline the development of web applications.</li>
+        </ul> 
+    </div>
     },
     Lua: {
       commonUses: `
