@@ -329,7 +329,7 @@ export default function StudentCanvas({ activity }) {
         'All unsaved progress will be lost. Do you still want to go back?'
       )
     )
-      navigate(-1);
+      navigate('/student');
   };
 
   const getFormattedDate = (value, locale = 'en-US') => {
