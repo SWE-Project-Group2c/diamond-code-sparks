@@ -337,6 +337,17 @@ export default function StudentCanvas({ activity }) {
     return output + ' ' + new Date(value).toLocaleTimeString(locale);
   };
 
+    const dropMenu = (
+      <Menu>
+        <Menu.Item>Javascript</Menu.Item>
+        <Menu.Item>Python</Menu.Item>
+        <Menu.Item>PHP</Menu.Item>
+        <Menu.Item>Dart</Menu.Item>
+        <Menu.Item>Lua</Menu.Item>
+        <Menu.Item>Python</Menu.Item>
+      </Menu>
+  );
+
   const menu = (
     <Menu>
       <Menu.Item onClick={handlePlotter}>
@@ -455,6 +466,13 @@ export default function StudentCanvas({ activity }) {
                             <div className='popup ModalCompile4'>Redo</div>
                           )}
                         </button>
+                        <div id='icon-align' className='ant-col flex flex-row' style={{ transform: 'translate(4px, 0px)'}}>
+                          <Dropdown overlay={dropMenu} trigger={['click']} placement='topRight'>
+                            <button className='ant-btn ant-btn-default ant-dropdown-trigger' style={{ padding: '4px 10px', transform: 'translate(4px, 0px)' }}>
+                                <i id='icon-btn' className='fa fa-caret-down'></i>
+                            </button>
+                          </Dropdown>
+                        </div>
                       </Col>
                     </Row>
                   </Col>
@@ -514,30 +532,46 @@ export default function StudentCanvas({ activity }) {
         />          
       </div>
 
-      {/* This xml is for the blocks' menu we will provide. Here are examples on how to include categories and subcategories */}
       <xml id='toolbox' is='Blockly workspace'>
-        {
-          // Maps out block categories
-          activity &&
-            activity.toolbox &&
-            activity.toolbox.map(([category, blocks]) => (
-              <category name={category} is='Blockly category' key={category}>
-                {
-                  // maps out blocks in category
-                  // eslint-disable-next-line
-                  blocks.map((block) => {
-                    return (
-                      <block
-                        type={block.name}
-                        is='Blockly block'
-                        key={block.name}
-                      />
-                    );
-                  })
-                }
-              </category>
-            ))
-        }
+  {/* Main Blockly category */}
+  <category name='Blockly' is='Blockly category' colour='#5C81A6' expanded='false'>
+    {/* Dynamically generate subcategories from existing categories */}
+    {activity &&
+      activity.toolbox &&
+      activity.toolbox.map(([category, blocks]) => (
+        <category name={category} is='Blockly category' key={category}>
+          {blocks.map((block) => (
+            <block type={block.name} is='Blockly block' key={block.name}></block>   
+          ))}
+        </category>
+      ))}
+  </category>
+
+  {/* Main Scratch category */}
+  <category name='Scratch' is='Scratch category' colour='#C94E77' expanded='false'>
+    {activity &&
+      activity.toolbox &&
+      activity.toolbox.map(([category, blocks]) => (
+        <category name={category} is='Scratch category' key={category}>
+          {blocks.map((block) => (
+            <block type={block.name} is='Scratch block' key={block.name}></block>
+          ))}
+        </category>
+      ))}
+  </category>
+
+  {/* Main Arduino category */}
+  <category name='Arduino' is='Arduino category' colour='#7F8B52' expanded='false'>
+    {activity &&
+      activity.toolbox &&
+      activity.toolbox.map(([category, blocks]) => (
+        <category name={category} is='Arduino category' key={category}>
+          {blocks.map((block) => (
+            <block type={block.name} is='Arduino block' key={block.name}></block>
+          ))}
+        </category>
+      ))}
+  </category>
       </xml>
 
       {compileError && (

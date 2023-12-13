@@ -461,30 +461,47 @@ export default function ContentCreatorCanvas({
         />
       </div>
 
-      {/* This xml is for the blocks' menu we will provide. Here are examples on how to include categories and subcategories */}
+      
       <xml id='toolbox' is='Blockly workspace'>
-        {
-          // Maps out block categories
-          activity &&
-            activity.toolbox &&
-            activity.toolbox.map(([category, blocks]) => (
-              <category name={category} is='Blockly category' key={category}>
-                {
-                  // maps out blocks in category
-                  // eslint-disable-next-line
-                  blocks.map((block) => {
-                    return (
-                      <block
-                        type={block.name}
-                        is='Blockly block'
-                        key={block.name}
-                      />
-                    );
-                  })
-                }
-              </category>
-            ))
-        }
+  {/* Main Blockly category */}
+  <category name='Blockly' is='Blockly category' colour='#5C81A6' expanded='false'>
+    {/* Dynamically generate subcategories from existing categories */}
+    {activity &&
+      activity.toolbox &&
+      activity.toolbox.map(([category, blocks]) => (
+        <category name={category} is='Blockly category' key={category}>
+          {blocks.map((block) => (
+            <block type={block.name} is='Blockly block' key={block.name}></block>   
+          ))}
+        </category>
+      ))}
+  </category>
+
+  {/* Main Scratch category */}
+  <category name='Scratch' is='Scratch category' colour='#C94E77' expanded='false'>
+    {activity &&
+      activity.toolbox &&
+      activity.toolbox.map(([category, blocks]) => (
+        <category name={category} is='Scratch category' key={category}>
+          {blocks.map((block) => (
+            <block type={block.name} is='Scratch block' key={block.name}></block>
+          ))}
+        </category>
+      ))}
+  </category>
+
+  {/* Main Arduino category */}
+  <category name='Arduino' is='Arduino category' colour='#7F8B52' expanded='false'>
+    {activity &&
+      activity.toolbox &&
+      activity.toolbox.map(([category, blocks]) => (
+        <category name={category} is='Arduino category' key={category}>
+          {blocks.map((block) => (
+            <block type={block.name} is='Arduino block' key={block.name}></block>
+          ))}
+        </category>
+      ))}
+  </category>
       </xml>
 
       {compileError && (
