@@ -337,6 +337,17 @@ export default function StudentCanvas({ activity }) {
     return output + ' ' + new Date(value).toLocaleTimeString(locale);
   };
 
+    const dropMenu = (
+      <Menu>
+        <Menu.Item>Javascript</Menu.Item>
+        <Menu.Item>Python</Menu.Item>
+        <Menu.Item>PHP</Menu.Item>
+        <Menu.Item>Dart</Menu.Item>
+        <Menu.Item>Lua</Menu.Item>
+        <Menu.Item>Python</Menu.Item>
+      </Menu>
+  );
+
   const menu = (
     <Menu>
       <Menu.Item onClick={handlePlotter}>
@@ -455,6 +466,13 @@ export default function StudentCanvas({ activity }) {
                             <div className='popup ModalCompile4'>Redo</div>
                           )}
                         </button>
+                        <div id='icon-align' className='ant-col flex flex-row' style={{ transform: 'translate(4px, 0px)'}}>
+                          <Dropdown overlay={dropMenu} trigger={['click']} placement='topRight'>
+                            <button className='ant-btn ant-btn-default ant-dropdown-trigger' style={{ padding: '4px 10px', transform: 'translate(4px, 0px)' }}>
+                                <i id='icon-btn' className='fa fa-caret-down'></i>
+                            </button>
+                          </Dropdown>
+                        </div>
                       </Col>
                     </Row>
                   </Col>
