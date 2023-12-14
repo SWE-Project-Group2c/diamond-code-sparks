@@ -140,3 +140,30 @@ Before submitting a pull request, rebase the feature branch into the target bran
 
 - PRs to **master** should squash and merge
 - PRs to all other branches should create a merge commit
+
+### Features Added
+ - Help Page 
+    * Navigation and Back Button:
+          * Includes a question mark in workspace to navigate to help page and back button with a left arrow icon for easy navigation back to workspace.
+          * Uses the react-router-dom Link component for smooth transitions.
+    * Language and Category Selection:
+          * Allows users to select between Blockly and Scratch categories.
+          * Supports language selection (JavaScript, Python, PHP, Lua, Dart).
+    * Dynamic Content Display:
+          * Dynamically displays documentation, common uses, sample projects, and FAQ based on the selected language.
+          * Content changes in real-time as the user selects different languages.
+    * Styling and Layout:
+          * Responsive and well-styled layout for a user-friendly experience.
+          * Organized sections for better readability.
+  ![Help Button](help_button-1.png)
+  ![Help Landing Page](help_landing_page-1.png)
+  ![Dynamic Changing Info (Blockly Language Selection)](dynamic_changing_info-1.png)
+  ![Dynamic Changing Info ()](dynamic_changing_info2-1.png)
+
+  - Wireframe implementation for switching between Blockly, Scratch, and Arduino.
+  ![Wireframe Design](wireframe_design-1.png)
+  ![Wireframe Implemented](wireframe_implementation-1.png)
+  ![Wireframe Implemented](wireframe_implementation2-1.png)
+  
+  - Switching languages feature on right side in the code output box with Blockly.
+  ![Switching Languages](dropdown_box-1.png)
