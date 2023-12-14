@@ -35,6 +35,7 @@ export default function StudentCanvas({ activity }) {
   const [saves, setSaves] = useState({});
   const [lastSavedTime, setLastSavedTime] = useState(null);
   const [lastAutoSave, setLastAutoSave] = useState(null);
+  const [programmingLanguageSelected, setProgrammingLanguage] = useState('');
 
   const [forceUpdate] = useReducer((x) => x + 1, 0);
   const navigate = useNavigate();
@@ -337,14 +338,20 @@ export default function StudentCanvas({ activity }) {
     return output + ' ' + new Date(value).toLocaleTimeString(locale);
   };
 
-    const dropMenu = (
+  //change language selected by student
+  const changeProgrammingLanguage = (programmingLanguage) => {
+    let currentLanguage = setProgrammingLanguage(programmingLanguage);
+    return currentLanguage;
+  };
+
+  //dropdown menu to change programming language of output
+  const dropMenu = (
       <Menu>
-        <Menu.Item>Javascript</Menu.Item>
-        <Menu.Item>Python</Menu.Item>
-        <Menu.Item>PHP</Menu.Item>
-        <Menu.Item>Dart</Menu.Item>
-        <Menu.Item>Lua</Menu.Item>
-        <Menu.Item>Python</Menu.Item>
+        <Menu.Item onClick={() => changeProgrammingLanguage('Javascript')}>Javascript</Menu.Item>
+        <Menu.Item onClick={() => changeProgrammingLanguage('Python')}>Python</Menu.Item>
+        <Menu.Item onClick={() => changeProgrammingLanguage('PHP')}>PHP</Menu.Item>
+        <Menu.Item onClick={() => changeProgrammingLanguage('Dart')}>Dart</Menu.Item>
+        <Menu.Item onClick={() => changeProgrammingLanguage('Lua')}>Lua</Menu.Item>
       </Menu>
   );
 
