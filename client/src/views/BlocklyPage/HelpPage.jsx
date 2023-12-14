@@ -345,6 +345,11 @@ const HelpPage = () => {
 
   const handleCategoryChange = (newCategory) => {
     setCategory(newCategory);
+    setLanguage(getDefaultLanguageForCategory(newCategory));
+  };
+
+  const getDefaultLanguageForCategory = (category) => {
+    return category === 'blockly' ? 'JavaScript' : 'DefaultScratchLanguage';
   };
 
   const handleLanguageChange = (newLanguage) => {
@@ -412,19 +417,66 @@ const HelpPage = () => {
           {/* Scratch-specific content here */}
           <h3>Scratch Documentation</h3>
            {/* Common Uses Section */}
-           <div className="help-section">
-            <h4>Common Uses</h4>
-            <p>{languageContent.commonUses}</p>
+            <div className="help-section">
+                <h4>Common Uses</h4>
+                <h5>Scratch is a visual programming language designed for beginners to introduce them to coding concepts in a fun and interactive way. Scratch is commonly used for: </h5>
+            <ul>
+              <li>
+              Game Development: Users can create simple games by dragging and dropping code blocks to control characters, movements, and interactions.
+              </li>
+            </ul> 
+            <ul>
+              <li>Animations: Scratch is popular for creating animations by sequencing visual code blocks to control sprite movements, changes, and effects.</li>
+            </ul>
+            <ul>
+              <li>Interactive Stories: Users can develop interactive stories by programming characters and scenes, enabling storytelling through code.</li>
+            </ul>
+            <ul>
+              <li>Simulations: Scratch allows the creation of interactive simulations and experiments, providing a hands-on learning experience.</li>
+            </ul>
+            <h5>Note: Not all of this cannot be done within CodeSparks, however as you learn and grow in your programming journey, you could one day do all of these things in your very own IDE! </h5>
           </div>
           {/* Sample Projects Section */}
           <div className="help-section">
             <h4>Sample Projects</h4>
-            <p>{languageContent.sampleProjects}</p>
+            <h5>Interactive Storytelling</h5>
+            <ul>
+              <li>
+              Create an interactive story with multiple characters, dialogues, and branching narratives. Users can navigate through the story by interacting with the programmed elements.
+              </li>
+            </ul> 
+            <h5>Game Creation</h5>
+            <ul>
+              <li>Develop a simple game, such as a maze runner or a platformer, using Scratch's visual coding blocks to control characters, movements, and game mechanics.</li>
+            </ul>
+            <h5>Digital Art</h5>
+            <ul>
+              <li>Use Scratch to create digital art and animations. Users can experiment with different visual effects, sprite movements, and backgrounds to express their creativity.</li>
+            </ul>
+            <h5>Math Puzzles</h5>
+            <ul>
+              <li>Build educational projects like math puzzles or quizzes that reinforce mathematical concepts through interactive and visually engaging challenges.</li>
+            </ul>
+            <h5>Virtual Pets</h5>
+            <ul>
+              <li>Design and code a virtual pet simulation where users can take care of a digital pet by feeding, playing, and interacting with it.</li>
+            </ul>
           </div>
           {/* FAQ Section */}
           <div className="help-section">
             <h4>FAQ</h4>
-            <p>{languageContent.faq}</p>
+                <h5>Q: What is Scratch used for?</h5>
+            <ul>
+              <li>A: Scratch is primarily used for educational purposes, teaching coding concepts through a visual interface. It is often used to introduce programming to beginners, especially children, in a creative and interactive manner.</li>
+            </ul>
+            <h5>Q: How does Scratch differ from traditional programming languages?</h5>
+            <ul>
+              <li>A: Scratch uses a visual block-based programming approach, making it more accessible for beginners. Traditional programming languages involve typing code, while Scratch allows users to drag and drop code blocks, eliminating syntax-related barriers.</li>
+            </ul> 
+            <h5>Q: Can Scratch be used for professional software development?</h5>
+            <ul>
+              <li>A: Scratch is not typically used for professional software development. It is designed as an educational tool to teach programming concepts and is not suitable for building complex, production-level applications.</li>
+            </ul> 
           </div>
         </div>
       )}

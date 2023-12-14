@@ -78,7 +78,28 @@
     margin-bottom: 10px;
     font-weight: bold;
   }
+
+  .scratch-content help-section h4 {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .scratch-content help-section {
+    margin-left: auto; /* Move the content to the right */
+    max-width: 1250px;
+  }
+
   
+  .scratch-content help-section h5 {
+    font-size: small;
+  }
+
+  .scratch-content help-section ul {
+      margin-left: 25px;
+  }
+    
   
 
   
